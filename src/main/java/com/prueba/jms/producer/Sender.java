@@ -17,6 +17,7 @@ public class Sender {
   public void send(String message) {
     LOGGER.info("Mensaje Enviado='{}'", message);
     System.out.println("Mensaje Enviado "+ message);
+    //llamado autowired de jmsTemplate del springframework
     jmsTemplate.convertAndSend("prueba.q",message);
   }
 }
